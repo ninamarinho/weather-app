@@ -50,7 +50,6 @@ currentCityBtn.addEventListener("click", getLocation);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  console.log(response.data);
 
   document.querySelector("h3").innerHTML = response.data.weather[0].main;
   document.querySelector(".temp").innerHTML = `${temperature}ºC `;
@@ -65,6 +64,22 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  function searchCity(city) {
+    let apiKey = "276a00f4760abde96568d09a2a8db99e";
+    let unit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    let city = document.querySelector("#search-input");
+    searchCity(city.value);
+  }
+
+  let form = document.querySelector("form");
+  form.addEventListener("submit", handleSubmit);
 
   // ºC
   function tempC(event) {
@@ -87,17 +102,3 @@ function showTemperature(response) {
   let farenheightBtn = document.querySelector(".f");
   farenheightBtn.addEventListener("click", tempF);
 }
-
-function searchCity(event) {
-  event.preventDefault();
-  let apiKey = "276a00f4760abde96568d09a2a8db99e";
-  let city = document.querySelector("#search-input").value;
-  let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
-  axios.get(apiUrl).then(showTemperature);
-}
-
-let form = document.querySelector("form");
-form.addEventListener("submit", searchCity);
-
-search("New York");
