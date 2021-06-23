@@ -86,3 +86,7 @@ body {
   font-size: 1rem;
   text-decoration: underline;
 }
+
+footer {
+  padding-left: 115px;
+}
