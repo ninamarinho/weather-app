@@ -50,10 +50,13 @@ currentCityBtn.addEventListener("click", getLocation);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
+  console.log(response.data);
 
   document.querySelector("h3").innerHTML = response.data.weather[0].main;
   document.querySelector(".temp").innerHTML = `${temperature}ºC `;
-  document.querySelector("h1").innerHTML = response.data.name;
+  let city = response.data.name;
+  let country = response.data.sys.country;
+  document.querySelector("h1").innerHTML = `${city}, ${country}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
 
