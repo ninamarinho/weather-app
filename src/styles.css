@@ -1,39 +1,29 @@
-.weather {
-  font-size: 55px;
-  color: black;
-}
-.week {
-  text-align: left;
-}
-.week-temp {
-  text-align: left;
-  font-weight: bold;
-}
-.week-emoji {
-  text-align: left;
-}
-.card {
-  padding: 30px;
-  margin: 20px;
-}
-
 h1 {
   font-weight: bolder;
 }
 h2 {
   font-weight: normal;
 }
-h3 {
+h3,
+h4 {
   font-weight: normal;
+  font-size: 20px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
+img,
+svg {
+  vertical-align: middle;
+  position: relative;
+  line-height: 0px;
+  margin-bottom: 36px;
+}
 
 .c {
   font-weight: 400px;
-  line-height: 1.5;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -46,7 +36,7 @@ body {
 }
 .f {
   font-weight: 400px;
-  line-height: 1.5;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -86,7 +76,28 @@ body {
   font-size: 1rem;
   text-decoration: underline;
 }
+.weather {
+  font-size: 55px;
+  color: black;
+}
+.week {
+  text-align: left;
+}
+.week-temp {
+  text-align: left;
+  font-weight: bold;
+}
+.week-emoji {
+  text-align: left;
+}
+.card {
+  padding: 30px;
+}
+.text-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+}
 
-footer {
-  text-align: center;
+.temp {
+  font-size: 60px;
 }

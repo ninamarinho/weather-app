@@ -22,90 +22,95 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="card shadow-sm bg-white rounded">
-        <form>
-          <div class="row">
-            <div class="col-7">
-              <input
-                type="text"
-                class="form-control"
-                id="search-input"
-                placeholder="Enter a City"
-              />
+    <div class="text-wrapper">
+      <div class="container">
+        <div class="card shadow-sm bg-white rounded">
+          <form>
+            <div class="row">
+              <div class="col-7">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="search-input"
+                  placeholder="Enter a City"
+                />
+              </div>
+              <div class="col-2">
+                <button type="submit" class="btn btn-success">Search</button>
+              </div>
+              <div class="col-3">
+                <button
+                  id="current-city-btn"
+                  type="button"
+                  class="btn btn-success"
+                >
+                  Current City
+                </button>
+              </div>
             </div>
-            <div class="col-2">
-              <button type="submit" class="btn btn-success">Search</button>
-            </div>
-            <div class="col-3">
-              <button
-                id="current-city-btn"
-                type="button"
-                class="btn btn-success"
-              >
-                Current City
-              </button>
-            </div>
-          </div>
-        </form>
-        <br />
+          </form>
+          <br />
 
-        <div class="row">
-          <div class="col">
-            <h1 id="search-form"></h1>
-            <h2 id="day-time"></h2>
-            <h3></h3>
-          </div>
-          <div class="col">
-            <div class="weather">
+          <div class="row">
+            <div class="col">
+              <h1 id="search-form"></h1>
+
+              <span> <img src="" alt="Clear" id="icon" /> </span>
+
               <span class="temp"> </span>
-              <span> ☀️ </span>
 
               <a href="#" class="c"> ºC </a>
               <span id="temp-slash">|</span>
               <a href="#" class="f"> ºF </a>
-              <h4>Humidity: <span id="humidity"> </span>%</h4>
-              <h4>Wind: <span id="wind"> </span>km/h</h4>
+            </div>
+            <div class="col">
+              <div class="weather">
+                <h2 id="day-time"></h2>
+                <h3></h3>
+                <h4>Humidity: <span id="humidity"> </span>%</h4>
+                <h4>Wind: <span id="wind"> </span>km/h</h4>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row week-emoji">
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-          <div class="col">☀️</div>
-        </div>
+          <div class="row week-emoji">
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+            <div class="col">☀️</div>
+          </div>
 
-        <div class="row week">
-          <div class="col">MON</div>
-          <div class="col">TUE</div>
-          <div class="col">WED</div>
-          <div class="col">THU</div>
-          <div class="col">FRI</div>
-          <div class="col">SAT</div>
-          <div class="col">SUN</div>
-        </div>
+          <div class="row week">
+            <div class="col">MON</div>
+            <div class="col">TUE</div>
+            <div class="col">WED</div>
+            <div class="col">THU</div>
+            <div class="col">FRI</div>
+            <div class="col">SAT</div>
+            <div class="col">SUN</div>
+          </div>
 
-        <div class="row week-temp">
-          <div class="col" id="mon">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
-          <div class="col">27ºC / 13ºC</div>
+          <div class="row week-temp">
+            <div class="col" id="mon">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+            <div class="col">27ºC / 13ºC</div>
+          </div>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/ninamarinho/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Ana Marinho
+      </footer>
     </div>
-    <footer>
-      <a href="https://github.com/ninamarinho/weather-app" target="_blank"
-        >Open-source code</a
-      >
-      by Ana Marinho
-    </footer>
+
     <script src="src/project.js"></script>
   </body>
 </html>

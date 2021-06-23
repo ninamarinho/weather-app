@@ -59,6 +59,12 @@ function showTemperature(response) {
   document.querySelector("h1").innerHTML = `${city}, ${country}`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   // ºC
   function tempC(event) {
@@ -93,3 +99,5 @@ function searchCity(event) {
 
 let form = document.querySelector("form");
 form.addEventListener("submit", searchCity);
+
+search("New York");
