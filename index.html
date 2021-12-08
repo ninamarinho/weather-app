@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,95 +20,76 @@
   </head>
 
   <body>
-    <div class="text-wrapper">
-      <div class="container">
-        <div class="card shadow-sm bg-white rounded">
-          <form>
-            <div class="row">
-              <div class="col-7">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="search-input"
-                  placeholder="Enter a City"
-                />
-              </div>
-              <div class="col-2">
-                <button type="submit" class="btn btn-success">Search</button>
-              </div>
-              <div class="col-3">
-                <button
-                  id="current-city-btn"
-                  type="button"
-                  class="btn btn-success"
-                >
-                  Current City
-                </button>
-              </div>
-            </div>
-          </form>
-          <br />
-
+    <div class="container">
+      <div class="card shadow-sm bg-white rounded">
+        <form>
           <div class="row">
-            <div class="col">
-              <h1 id="search-form"></h1>
+            <div class="col-7">
+              <input
+                type="text"
+                class="form-control"
+                id="search-input"
+                placeholder="Enter a City"
+              />
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-success">Search</button>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-success">
+                Current City
+              </button>
+            </div>
+          </div>
+        </form>
+        <br />
 
-              <span> <img src="" alt="Clear" id="icon" /> </span>
-
+        <div class="row">
+          <div class="col">
+            <h1>Miami, Fl</h1>
+            <h2 id="day-time">Monday</h2>
+            <h3>Cloudy</h3>
+          </div>
+          <div class="col">
+            <div class="weather">
               <span class="temp"> </span>
-
-              <a href="#" class="c" id="active">ºC </a>
-              <span id="temp-slash">|</span>
-              <a href="#" class="f">ºF </a>
+              <span> ☀️ </span>
+              <button class="c">C</button>
+              <button class="f">F</button>
             </div>
-            <div class="col">
-              <div class="weather">
-                <h2 id="day-time"></h2>
-                <h3></h3>
-                <h4>Humidity: <span id="humidity"> </span>%</h4>
-                <h4>Wind: <span id="wind"> </span>km/h</h4>
-              </div>
-            </div>
-          </div>
-          <div class="row week-emoji">
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-            <div class="col">☀️</div>
-          </div>
-
-          <div class="row week">
-            <div class="col">MON</div>
-            <div class="col">TUE</div>
-            <div class="col">WED</div>
-            <div class="col">THU</div>
-            <div class="col">FRI</div>
-            <div class="col">SAT</div>
-            <div class="col">SUN</div>
-          </div>
-
-          <div class="row week-temp">
-            <div class="col" id="mon">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
-            <div class="col">27ºC / 13ºC</div>
           </div>
         </div>
-      </div>
-      <footer>
-        <a href="https://github.com/ninamarinho/weather-app" target="_blank"
-          >Open-source code</a
-        >
-        by Ana Marinho
-      </footer>
-    </div>
+        <div class="row week-emoji">
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+          <div class="col">☀️</div>
+        </div>
 
+        <div class="row week">
+          <div class="col">MON</div>
+          <div class="col">TUE</div>
+          <div class="col">WED</div>
+          <div class="col">THU</div>
+          <div class="col">FRI</div>
+          <div class="col">SAT</div>
+          <div class="col">SUN</div>
+        </div>
+
+        <div class="row week-temp">
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+          <div class="col">27ºC / 13ºC</div>
+        </div>
+      </div>
+    </div>
     <script src="src/project.js"></script>
   </body>
 </html>
