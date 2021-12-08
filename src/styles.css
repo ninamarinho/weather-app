@@ -21,6 +21,10 @@ svg {
   margin-bottom: 36px;
 }
 
+footer {
+  text-align: center;
+}
+
 .c {
   font-weight: 400px;
   line-height: 1;
@@ -56,6 +60,7 @@ svg {
   background-color: #198754;
   color: white;
 }
+
 .f:hover {
   background-color: #198754;
   color: white;
@@ -96,7 +101,7 @@ svg {
   border-radius: 5px;
 }
 .text-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
 }
 

@@ -67,6 +67,11 @@ function handleSubmit(event) {
 }
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
+
+
+
+
+
 // ºC
 function tempC(event) {
   let celsius = document.querySelector(".temp");
